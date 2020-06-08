@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  alertmanager-bot:
+    image: nayls/alertmanager-bot
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./develop.config.yaml:/alertmanager-bot/config.yaml
+    ports:
+      - 8080:8080

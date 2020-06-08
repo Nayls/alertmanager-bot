@@ -1,0 +1,8 @@
+bin/
+ops/
+.idea/
+.git/
+
+Dockerfile
+docker-compose.yaml
+Makefile

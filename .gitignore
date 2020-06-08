@@ -1,0 +1,8 @@
+dist/
+bin/
+.idea/
+
+*.config.yaml
+
+ops/develop/alertmanager-bot/data
+ops/develop/prometheus/data

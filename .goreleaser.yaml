@@ -1,0 +1,68 @@
+project_name: alertmanager-bot
+
+release:
+  github:
+    owner: Nayls
+    name: alertmanager-bot
+  prerelease: auto
+  name_template: '{{.Tag}}'
+  ids:
+    - alertmanager-bot
+
+before:
+  hooks:
+    - go mod download
+
+builds:
+- id: alertmanager-bot
+  main: ./
+  env:
+    - CGO_ENABLED=0
+  flags:
+    - -mod=vendor
+  binary: alertmanager-bot
+
+archives:
+- replacements:
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+    386: i386
+    amd64: x86_64
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ .Tag }}"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+
+dockers:
+  - goos: linux
+    goarch: amd64
+    goarm: ''
+    binaries:
+      - "{{.ProjectName}}"
+    image_templates:
+      - "docker.io/nayls/{{.ProjectName}}:latest"
+      - "docker.io/nayls/{{.ProjectName}}:{{ .Tag }}"
+    skip_push: false
+    dockerfile: gorelease.Dockerfile
+    build_flag_templates:
+      - "--compress"
+      - "--rm"
+      - "--pull"
+      - "--target=gorelease-image"
+      - "--label=org.label-schema.schema-version=1.0"
+      - "--label=org.label-schema.version={{.Version}}"
+      - "--label=org.label-schema.name={{.ProjectName}}"
+    extra_files:
+      - config.yaml
+      - LICENSE
+      - README.md

@@ -1,0 +1,147 @@
+{
+    "receiver": "discord_webhook",
+    "status": "firing",
+    "alerts": [
+        {
+            "status": "firing",
+            "labels": {
+                "alertname": "service_up",
+                "correlate": "service_up,service_down",
+                "dc": "eu-west-1",
+                "environment": "Production",
+                "grafana_dashboard_image": "http://dotsandbrackets.com/wp-content/uploads/2017/01/grafana-dashboard.jpg",
+                "instance": "alerta: 8080",
+                "job": "alerta",
+                "monitor": "codelab",
+                "region": "EU",
+                "service": "Platform",
+                "severity": "normal"
+            },
+            "annotations": {
+                "description": "Service alerta: 8080 is available.",
+                "value": "UP (1)"
+            },
+            "startsAt": "2020-06-04T07: 07: 52.012771244Z",
+            "endsAt": "0001-01-01T00: 00: 00Z",
+            "generatorURL": "http: //e2d259dfe436:9090/graph?g0.expr=up+%3D%3D+1\u0026g0.tab=1",
+            "fingerprint": "884031c380901f 3b"
+        },
+        {
+            "status": "firing",
+            "labels": {
+                "alertname": "service_up",
+                "correlate": "service_up,service_down",
+                "dc": "eu-west-1",
+                "environment": "Production",
+                "grafana_dashboard_image": "http: //dotsandbrackets.com/wp-content/uploads/2017/01/grafana-dashboard.jpg",
+                "instance": "cadvisor: 8080",
+                "job": "cadvisor",
+                "monitor": "codelab",
+                "region": "EU",
+                "service": "Platform",
+                "severity": "normal"
+            },
+            "annotations": {
+                "description": "Service cadvisor: 8080 is available.",
+                "value": "UP (1)"
+            },
+            "startsAt": "2020-06-04T07: 07: 37.012771244Z",
+            "endsAt": "0001-01-01T00: 00: 00Z",
+            "generatorURL": "http: //e2d259dfe436:9090/graph?g0.expr=up+%3D%3D+1\u0026g0.tab=1",
+            "fingerprint": "f2e3f091602c5173"
+        },
+        {
+            "status": "firing",
+            "labels": {
+                "alertname": "service_up",
+                "correlate": "service_up,service_down",
+                "dc": "eu-west-1",
+                "environment": "Production",
+                "grafana_dashboard_image": "http: //dotsandbrackets.com/wp-content/uploads/2017/01/grafana-dashboard.jpg",
+                "instance": "collectd:9103",
+                "job": "collectd",
+                "monitor": "codelab",
+                "region": "EU",
+                "service": "Platform",
+                "severity": "normal"
+            },
+            "annotations": {
+                "description": "Service collectd: 9103 is available.",
+                "value": "UP (1)"
+            },
+            "startsAt": "2020-06-04T07: 07: 52.012771244Z",
+            "endsAt": "0001-01-01T00:00:00Z",
+            "generatorURL": "http://e2d259dfe436:9090/graph?g0.expr=up+%3D%3D+1\u0026g0.tab=1",
+            "fingerprint": "7c7a3e81d2fc3c1a"
+        },
+        {
+            "status": "firing",
+            "labels": {
+                "alertname": "service_up",
+                "correlate": "service_up,service_down",
+                "dc": "eu-west-1",
+                "environment": "Production",
+                "grafana_dashboard_image": "http: //dotsandbrackets.com/wp-content/uploads/2017/01/grafana-dashboard.jpg",
+                "instance": "node:9100",
+                "job": "node-exporter",
+                "monitor": "codelab",
+                "region": "EU ",
+                "service": "Platform",
+                "severity": "normal"
+            },
+            "annotations": {
+                "description": "Service node: 9100 is available.",
+                "value": "UP (1)"
+            },
+            "startsAt": "2020-06-04T07: 07: 37.012771244Z",
+            "endsAt": "0001-01-01T00: 00: 00Z",
+            "generatorURL": "http: //e2d2 59dfe436: 9090/graph?g0.expr=up+%3D%3D+1\u0026g0.tab=1",
+            "fingerprint": "da91b924394f840b"
+        },
+        {
+            "status": "firing",
+            "labels": {
+                "alertname": "service_up",
+                "correlate": "service_up,service_down",
+                "dc": "eu-west-1",
+                "environment": "Production",
+                "grafana_dashboard_image": "http: //dotsandbrackets.com/wp-content/uploads/2017/01/grafana-dashboard.jpg",
+                "instance": "prometheus:9090",
+                "job": "prometheus",
+                "monitor": "codelab",
+                "region": "EU",
+                "service": "Platform",
+                "severity": "normal"
+            },
+            "annotations": {
+                "description": "Service prometheus: 9090 is available.",
+                "value": "UP (1)"
+            },
+            "startsAt": "2020-06-04T07: 07: 37.012771244Z",
+            "endsAt": "0001-01-01T00: 00: 00Z",
+            "generatorURL":"http: //e2d259dfe436:9090/graph?g0.expr=up+%3D%3D+1\u0026g0.tab=1",
+            "fingerprint": "251038e4f09ccba7"
+        }
+    ],
+    "groupLabels": {
+        "alertname": "service_up",
+        "service": "Platform"
+    },
+    "commonLabels": {
+        "alertname": "service_up",
+        "correlate": "service_up,service_down",
+        "dc": "eu-west-1",
+        "environment": "Production",
+        "grafana_dashboard_image": "http: //dotsandbrackets.com/wp-content/uploads/2017/01/grafana-dashboard.jpg",
+        "monitor": "codelab",
+        "region": "EU",
+        "service": "Platform",
+        "severity": "normal"
+    },
+    "commonAnnotations": {
+        "value": "UP (1)"
+    },
+    "externalURL": "http: //3f548d51d997:9093",
+    "version": "4",
+    "groupKey": "{}:{alertname=\"service_up\", service=\"Platform\"}"
+}

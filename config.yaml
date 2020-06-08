@@ -1,0 +1,26 @@
+hostname: "0.0.0.0"
+port: "8080"
+debug: "false"
+discord:
+  username: "Discord AlertBot"
+  webhook: ""
+  avatar_url: ""
+grafana:
+  internal_url: "https://grafana.localhost:9090"
+  external_url: "http://localhost:8080"
+  basic_username: ""
+  basic_password: ""
+
+severity:
+  critical:
+    - "@critical"
+    - "<@243687813197856768>" # @nayls
+  warning:
+    - "@warning"
+    - "<@243687813197856768>" # @nayls
+  none:
+    - "@none"
+    - "<@243687813197856768>" # @nayls
+  normal:
+    - "@normal"
+    - "<@243687813197856768>" # @nayls

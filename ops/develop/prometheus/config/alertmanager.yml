@@ -1,0 +1,26 @@
+global:
+  # The smarthost and SMTP sender used for mail notifications.
+  smtp_smarthost: 'localhost:25'
+  smtp_from: 'alertmanager@example.org'
+
+route:
+  receiver: "discord_webhook"
+  # receiver: "alerta"
+  group_by: ['alertname', 'cluster', 'service']
+  group_wait:      5s
+  group_interval:  5s
+  repeat_interval: 5s
+
+receivers:
+- name: "alerta"
+  webhook_configs:
+  - url: 'http://alerta:8080/api/webhooks/prometheus'
+    send_resolved: true
+    http_config:
+      basic_auth:
+        username: admin@alerta.io
+        password: alerta
+- name: 'discord_webhook'
+  webhook_configs:
+  - url: 'http://192.168.10.11:8080/discord/embeds'
+    send_resolved: true
