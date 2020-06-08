@@ -70,7 +70,7 @@ func getConf() *Config {
 	viper.SetDefault("discord.username", "Discord AlertBot")
 	viper.SetDefault("discord.webhook", "")
 	viper.SetDefault("discord.avatar_url", "")
-	viper.SetDefault("grafana.internal_url", "http://localhost:8080/render/d-solo/")
+	viper.SetDefault("grafana.internal_url", "http://localhost:8080")
 	viper.SetDefault("grafana.external_url", "")
 	viper.SetDefault("grafana.basic_username", "")
 	viper.SetDefault("grafana.basic_password", "")
@@ -163,7 +163,7 @@ func main() {
 
 	bot := r.Group("/discord")
 	{
-		bot.POST("/embeds", func(c *gin.Context) {
+		bot.POST("/", func(c *gin.Context) {
 			b, err := ioutil.ReadAll(c.Request.Body)
 			if err != nil {
 				log.Panicln(err)
